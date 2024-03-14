@@ -5,17 +5,17 @@ class Joueur{
     private string $nom;
     private string $prenom;
     private DateTime $naissance;
-    private string $nationalite;
+    private Pays $nationalite;
+    private array $cariere;
 
-    public function __construct(string $nom, string $prenom, string $naissance, string $nationalite)
+    public function __construct(string $nom, string $prenom, string $naissance, Pays $nationalite)
     {
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->naissance = new datetime($naissance);
         $this->nationalite = $nationalite;
-
-
-        
+        $this->nationalite->addContenir($this);
+        $this->cariere = [];
     }
 
 
@@ -70,9 +70,32 @@ class Joueur{
         return $this;
     }
 
+    public function getCariere()
+    {
+        return $this->cariere;
+    }
+
+    
+    public function setCariere($cariere)
+    {
+        $this->cariere = $cariere;
+
+        return $this;
+    }
+
+    
+    public function addContenir(Contenir $cariere){      
+        $this->cariere[] = $cariere;
+
+    }
+
+
 
     public function __toString()
     {
-        return $this->nom." ".$this->prenom;
+        return $this->getNom()." ".$this->getPrenom();
     }
+
+    
+   
 }

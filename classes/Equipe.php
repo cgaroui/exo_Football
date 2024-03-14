@@ -3,28 +3,20 @@
 class Equipe{
     
     private string $pays;
-    private array $equipes;
+    private array $joueur;
+
 
 //constructeur
     public function __construct(string $pays)
     {
         $this->pays = $pays;
-        $this->equipes = [];
+       
+    
     }
 
 
-
-    public function getEquipes()
-    {
-        return $this->equipes;
-    }
-
-    public function setEquipes($equipes)
-    {
-        $this->equipes = $equipes;
-
-        return $this;
-    }
+//getters and setters 
+   
 
     public function getPays()
     {
@@ -44,4 +36,9 @@ class Equipe{
         return $this->pays;
     }
 
+
+    public function addContenir(Equipe $equipe){      //on remplie le tableau equipes initialement vide par les nom des equipes au fur et à mesure 
+        $this->equipe[] = $equipe;
+
+    }
 }
