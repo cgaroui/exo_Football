@@ -13,7 +13,14 @@ class Contenir{
         $this->dateDebut = new DateTime($dateDebut);
         $this->equipe = $equipe;
         $this->joueur = $joueur;
+
+        $this->equipe->addCariere($this);
+        $this->joueur->addCariere($this);
     }
+
+
+    
+
 
 
 //getters and setters 
@@ -56,38 +63,6 @@ class Contenir{
 
         return $this;
     }
-
-   
-
-    public function afficherJoueurs(){
-        $result = "<ul>";                       //fonction qui affiche sous forme de liste les eleùent contenu dans tableau joueurs et les affiche 
-
-        foreach($this->joueurs as $joueur){
-            $result .= "<li>$joueur</li>";    
-
-        }
-        $result .="</ul>";
-        return $result;
-        
-    }
-
- 
-    
-
-    public function afficherEquipe(){
-        $result = "<ul>";
-
-        foreach($this->equipes as $equipe){         //fonction qui affiche sous forme de liste les eleùent contenu dans tableau equipes  et les affiche 
-            $result .= "<li>$equipe</li>";
-        }
-        $result .="</ul>";
-        return $result;
-    }
-
-
-
-
- 
 
    
 }

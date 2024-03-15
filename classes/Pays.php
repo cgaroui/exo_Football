@@ -44,7 +44,7 @@ class Pays{
     }
 
 
-    public function addContenir(Equipe $equipe)
+    public function addEquipe(Equipe $equipe)
     {
         $this->equipes[] = $equipe;
     }
