@@ -19,10 +19,6 @@ class Contenir{
     }
 
 
-    
-
-
-
 //getters and setters 
     public function getDateDebut()
     {

@@ -29,7 +29,7 @@ $france = new Equipe("racing club stras");
 $equipe1 = new Equipe('PSG', '1970', $france);
 $equipe = new Equipe ('Racing Club Stras','1897', $france);
 
-S
+
 
 
 $cariere1 = new Contenir ($psg, '10-01-2017', $joueur3);
