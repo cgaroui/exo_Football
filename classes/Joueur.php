@@ -103,11 +103,12 @@ class Joueur{
     }
 
     public function cariereDunJoueur(){             //fonction qui permet d'afficher la cariere d'un joueur , son nom prenom age  
-        $result =   $this->nom." ".$this->prenom."<br>".$this->getAge();
+        echo "Cariere d'un Joueur <br>";
+        $result =  "<br>". $this->nom." ".$this->prenom."<br>".$this->getAge()." ans";
 
         foreach($this->carieres as $cariere){               //puis grace à cette boucle pn aura un affichage de chaque equipe du joueur avec anneé de debut 
             $result .= 
-            "<br>".$cariere->getEquipe() . "(" . $cariere->getDateDebut()->format('Y')  . ')';
+            "<br>".$cariere->getEquipe() . "-(" . $cariere->getDateDebut()->format('Y')  . ')'."<br>";
         }
         return $result;
     }

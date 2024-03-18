@@ -67,11 +67,13 @@ class Equipe{
         $this->carieres[] = $cariere;
     }
 
-    public function CariereJoueur(){
-        $carieres = [] ;
+    //methode permettant d'afficher la liste des joueur d'une equipe 
+    public function listeJoueur(){
+        echo "<br> les joueurs d'une equipe <br>";
+        $carieres = "" ;
 
         foreach($this->carieres as $cariere){
-            $carieres[] = $cariere->getJoueur();
+            $carieres.=$cariere->getJoueur()."<br>";
         }
         return $carieres;
 
@@ -80,12 +82,13 @@ class Equipe{
 
     public function __toString()
     {
-        return $this->nomEquipe.$this->dateCreation->format('Y')."<br>";
+        return $this->nomEquipe."<br>";
     }
 
-    public function afiicherJoueurs(){
+   public function afiicherJoueurs(){
+
         $result = "<ul> ";
-            $this->nomEquipe . '</br>'
+            $this->nomEquipe 
             . $this->pays->getPays() . " - "
             . $this->dateCreation->format('Y') . '</br>';
 
@@ -94,7 +97,6 @@ class Equipe{
             }
             $result = "</ul> ";
         }
+ 
 
-    }
-
-
+}

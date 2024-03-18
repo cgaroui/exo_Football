@@ -47,7 +47,7 @@ class Contenir{
         return $this;
     }
 
-    public function getJoueurs()
+    public function getJoueur()
     {
         return $this->joueur;
     }

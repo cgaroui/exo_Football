@@ -49,6 +49,21 @@ class Pays{
         $this->equipes[] = $equipe;
     }
 
+
+    public function afficherEquipe(){
+        echo " <br>les equipes d'un pays <br>";
+        $equipes = "<br>";
+        foreach($this->equipes as $equipe){
+            $equipes .= $equipe->getNomEquipe()."<br>";
+        }
+
+        
+      return $equipes;
+    }
+
+
+
+
 }
 
 

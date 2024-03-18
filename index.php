@@ -21,22 +21,23 @@ $joueur4 = new Joueur ('Lionel','Messi', '1987-06-24', $argentine);
 
 
 
-$france = new Equipe("psg");
-$france = new Equipe("marseille");
-$france = new Equipe("racing club stras");
 
 
-$equipe1 = new Equipe('PSG', '1970', $france);
-$equipe = new Equipe ('Racing Club Stras','1897', $france);
+
+$psg = new Equipe('PSG', '1970', $france);
+$racing = new Equipe ('Racing Club Stras','1897', $france);
 
 
 
 
-$cariere1 = new Contenir ($psg, '10-01-2017', $joueur3);
-$cariere2 = new Contenir($psg, '10-01-2021', $lionelMessi);
+$cariere1 = new Contenir ( '10-01-2017',$psg, $joueur1);
+$cariere2 = new Contenir('10-01-2021',$psg, $joueur4);
 
-echo $joueur2;
+echo $joueur1->cariereDunJoueur();
 echo $france->afficherEquipe();
+echo $psg->listeJoueur();
+
+
 
 
 
